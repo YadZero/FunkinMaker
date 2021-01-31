@@ -1,7 +1,7 @@
 # Funkin Maker
 <details>
-  <summary>This was not made by Ninjamuffin99 ([`Friday Night Funkin Creator`](https://ninja-muffin24.itch.io/funkin))</summary>
-  ([`Ninjamuffin99's Itch Page`](https://ninja-muffin24.itch.io/)) Here you can find all of his games!
+  <summary>This was not made by Ninjamuffin99 ([Friday Night Funkin Creator](https://ninja-muffin24.itch.io/funkin))</summary>
+  ([Ninjamuffin99's Itch Page](https://ninja-muffin24.itch.io/)) Here you can find all of his games!
 </details>
 
 ### Input
