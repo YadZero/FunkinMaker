@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="DOC/css/sprites.css">
+        <link rel="stylesheet" href="DOC/css/toast.css">
+        <link rel="stylesheet" href="DOC/css/general.css">
+        <link rel="stylesheet" href="DOC/css/markdown.css">
+    </head>
+    <body>
+        <script src="DOC/javascript/toast.js"></script>
+        <script src="DOC/javascript/funkin.js"></script>
+        <div id="toastShower" class="toasts">
+            <div id="toastBackground" class="background"></div>
+        </div>
+        <div class="buttonsChar">
+            <div id="charEdit" class="button visible">
+                <svg viewBox="0 0 74 74" style="fill: white;" width="58" height="58"><path d="M36.976,19.792a8.9,8.9,0,1,1,8.9-8.9A8.906,8.906,0,0,1,36.976,19.792ZM36.976,4a6.9,6.9,0,1,0,6.9,6.9A6.9,6.9,0,0,0,36.976,4Z"/><path d="M47.571,50.4H45.609a1,1,0,0,1,0-2h1.961a3.871,3.871,0,0,0,3.867-3.867V28.8A4.446,4.446,0,0,0,47,24.36H27a4.446,4.446,0,0,0-4.441,4.44V44.538A3.871,3.871,0,0,0,26.429,48.4h1.89a1,1,0,0,1,0,2h-1.89a5.873,5.873,0,0,1-5.867-5.867V28.8A6.448,6.448,0,0,1,27,22.36H47a6.448,6.448,0,0,1,6.441,6.44V44.538A5.873,5.873,0,0,1,47.571,50.4Z"/><path d="M41.287,72A5.293,5.293,0,0,1,36,66.713V50.05a1,1,0,0,1,2,0V66.713a3.287,3.287,0,0,0,6.574,0V35.126a1,1,0,0,1,2,0V66.713A5.293,5.293,0,0,1,41.287,72Z"/><path d="M32.713,72a5.293,5.293,0,0,1-5.287-5.287V35.126a1,1,0,0,1,2,0V66.713a3.287,3.287,0,0,0,6.574,0V50.05a1,1,0,0,1,2,0V66.713A5.293,5.293,0,0,1,32.713,72Z"/></svg>
+            </div>
+        </div>
+            <img class="display_" id="character" width="600" height="400" style="z-index: 11;">
+        <br>
+        <div id="spritesChanger" class="sprites row">
+            <p id="closeSpritesChanger" class="close">&#10006;</p>
+            <div class="sprites box">
+                <p class="title">Idle Anim</p>
+                <div class="filesInput">
+                    <div class="inputer">
+                        <input class="input" id="character_idle_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Idle 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_idle_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Idle 2 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_idle_three" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Idle 3 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_idle_four" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Idle 4 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_idle_five" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Idle 5 File</label>
+                    </div>
+                </div>
+            </div>
+            <div class="sprites box">
+                <p class="title">Left Anim</p>
+                <div class="filesInput">
+                    <div class="inputer">
+                        <input class="input" id="character_left_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Left 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_left_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Left 2 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_left_three" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Left 3 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_left_miss_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_left_miss_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 2 File</label>
+                    </div>
+                </div>
+            </div>
+            <div class="sprites box">
+                <p class="title">Right Anim</p>
+                <div class="filesInput">
+                    <div class="inputer">
+                        <input class="input" id="character_right_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Right 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_right_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Right 2 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_right_miss_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_right_miss_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 2 File</label>
+                    </div>
+                </div>
+            </div>
+            <div class="sprites box">
+                <p class="title">Down Anim</p>
+                <div class="filesInput">
+                    <div class="inputer">
+                        <input class="input" id="character_down_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Down 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_down_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Down 2 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_down_miss_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_down_miss_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 2 File</label>
+                    </div>
+                </div>
+            </div>
+            <div class="sprites box">
+                <p class="title">Up Anim</p>
+                <div class="filesInput">
+                    <div class="inputer">
+                        <input class="input" id="character_up_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Up 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_up_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Up 2 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_up_miss_one" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 1 File</label>
+                    </div>
+                    <br><br>
+                    <div class="inputer">
+                        <input class="input" id="character_up_miss_two" type="file" accept=".png" max="1"/>
+                        <label class="inputButton">Miss 2 File</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

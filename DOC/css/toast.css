@@ -1,0 +1,94 @@
+.toasts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.toasts .background {
+    position: relative;
+    opacity: 0;
+    background-color: black;
+    width: 1246px;
+    height: 580px;
+    pointer-events: none;
+    transform: scale(0.3);
+    transition: all 1400ms;
+    z-index: 100;
+}
+
+.toasts .background.visible {
+    opacity: 0.4;
+    z-index: 100;
+    position: relative;
+    transform: scale(2);
+    transition: all 1400ms;
+}
+
+.toasts .toast {
+    position: absolute;
+    z-index: 110;
+    max-width: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -120%);
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    box-shadow: 3px 2px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 450px;
+    font-size: 23px;
+    height: fit-content;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0;
+    transition: all 350ms;
+}
+
+.toasts .toast.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: all 520ms;
+}
+
+.toasts .toast.warning {
+    background-color: rgb(201, 57, 57);
+    color: white;
+    font-weight: bold;
+    transition: all 520ms;
+}
+
+.toasts .toast.advice {
+    background-color: rgb(235, 221, 36);
+    color: black;
+    font-weight: bold;
+    transition: all 520ms;
+}
+
+.toasts .toast.succesfull {
+    background-color: rgb(59, 185, 59);
+    color: white;
+    font-weight: bold;
+    transition: all 520ms;
+}
+
+.toasts .toast.neutral {
+    background-color: rgb(50, 98, 187);
+    color: white;
+    font-weight: bold;
+    transition: all 520ms;
+}
+
+.toasts .toast .title {
+    font-size: 28px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -23%);
+    width: 100%;
+    height: fit-content;
+    padding: 10px 15px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0px 0px;
+}
