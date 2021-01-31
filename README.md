@@ -5,12 +5,12 @@
 </details>
 
 ### Input
-`Left Arrow`: **Left Movement**
-`Right Arrow`: **Right Movement**
-`Up Arrow`: **Up Movement**
-`Down Arrow`: **Down Movement**
+..* `Left Arrow`: **Left Movement**
+..* `Right Arrow`: **Right Movement**
+..* `Up Arrow`: **Up Movement**
+..* `Down Arrow`: **Down Movement**
 
-`W Key`: **Up Miss**
-`A Key`: **Left Miss**
-`S Key`: **Down Miss**
-`D Key`: **Right Key**
+..* `W Key`: **Up Miss**
+..* `A Key`: **Left Miss**
+..* `S Key`: **Down Miss**
+..* `D Key`: **Right Key**
