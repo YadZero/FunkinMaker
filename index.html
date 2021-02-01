@@ -5,10 +5,24 @@
         <link rel="stylesheet" href="DOC/css/toast.css">
         <link rel="stylesheet" href="DOC/css/general.css">
         <link rel="stylesheet" href="DOC/css/markdown.css">
+        <link rel="stylesheet" href="DOC/css/arrows.css">
+        <meta name="viewport" content="user-scalable=0" />
+        <style>
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+        </style>
     </head>
     <body>
         <script src="DOC/javascript/toast.js"></script>
+        <script src="DOC/javascript/download.js"></script>
         <script src="DOC/javascript/funkin.js"></script>
+        <script src="DOC/javascript/mobileTweaks.js"></script>
         <div id="toastShower" class="toasts">
             <div id="toastBackground" class="background"></div>
         </div>
@@ -49,6 +63,13 @@
         <br>
         <div id="spritesChanger" class="sprites row">
             <p id="closeSpritesChanger" class="close">&#10006;</p>
+            <div class="inputer" style="position: absolute; left: 50%; top: 20%; transform: translate(-50%, -50%);">
+                <input class="input" type="file" id="jsonSprites" accept=".json">
+                <label class="inputButton">JSON Sprites</label>
+            </div>
+            <div class="inputer" style="position: absolute; left: 50%; top: 25%; transform: translate(-50%, -50%);">
+                <label class="inputButton" id="downloadJSONs">Download JSON</label>
+            </div>
             <div class="sprites box">
                 <p class="title">Idle Anim</p>
                 <div class="filesInput">
@@ -179,6 +200,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="mobileArrows" class="arrowsTouch" style="display: none;">
+            <script>
+                function noSelect() {
+                    return false;
+                }
+            </script>
+            <img id="mobileAU" src="Assets/Sprites/Arrows/Success/Up.png" class="arrow up"></button>
+            <img id="mobileAD" src="Assets/Sprites/Arrows/Success/Down.png" class="arrow down">
+            <img id="mobileAR" src="Assets/Sprites/Arrows/Success/Right.png" class="arrow right">
+            <img id="mobileAL" src="Assets/Sprites/Arrows/Success/Left.png" class="arrow left">
         </div>
     </body>
 </html>

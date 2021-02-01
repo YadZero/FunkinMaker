@@ -15,7 +15,7 @@ window.TOASTS = {
         toastDiv.classList = `toast ${mode}`
         toastDiv.innerHTML = template;
         setTimeout(() => {
-            toastsList.append(toastDiv)
+            toastsList.prepend(toastDiv)
             toastBackground.classList.add('visible')
             setTimeout(() => {
                 toastDiv.classList = `toast show ${mode}`
@@ -43,7 +43,7 @@ window.TOASTS = {
         toastDiv.classList = `toast ${mode}`
         toastDiv.innerHTML = template;
         setTimeout(() => {
-            toastsList.append(toastDiv)
+            toastsList.prepend(toastDiv)
             toastBackground.classList.add('visible')
             setTimeout(() => {
                 toastDiv.classList = `toast show ${mode}`

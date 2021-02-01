@@ -2,33 +2,39 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 0.2px;
+    height: 0.2px;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 100000;
+    background-color: black;
+    opacity: 1;
 }
 
 .toasts .background {
-    position: relative;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    transform: translate(-50%, -50%) scale(0);
     opacity: 0;
     background-color: black;
     width: 1246px;
     height: 580px;
     pointer-events: none;
-    transform: scale(0.3);
     transition: all 1400ms;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .toasts .background.visible {
     opacity: 0.4;
-    z-index: 100;
-    position: relative;
-    transform: scale(2);
+    z-index: 1000;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(2);
     transition: all 1400ms;
 }
 
 .toasts .toast {
     position: absolute;
-    z-index: 110;
+    z-index: 1200;
     max-width: 450px;
     left: 50%;
     top: 50%;
@@ -49,6 +55,7 @@
 .toasts .toast.show {
     opacity: 1;
     transform: translate(-50%, -50%);
+    z-index: 1200;
     transition: all 520ms;
 }
 

@@ -1,0 +1,46 @@
+.arrowsTouch {
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+}
+
+.arrow {
+    width: 30%;
+    height: 30%;
+    user-select: none;
+}
+
+.arrow.up {
+    position: absolute;
+    background-image: url('../../Assets/Sprites/Arrows/Success/Up.png');
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow.down {
+    position: absolute;
+    background-image: url('../../Assets/Sprites/Arrows/Success/Down.png');
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow.right {
+    position: absolute;
+    background-image: url('../../Assets/Sprites/Arrows/Success/Right.png');
+    top: 100%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow.left {
+    position: absolute;
+    background-image: url('../../Assets/Sprites/Arrows/Success/Left.png');
+    top: 100%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
