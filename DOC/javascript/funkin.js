@@ -11,7 +11,6 @@ var idle_5 = "Assets/Sprites/Boyfriend/Idle/Idle_5.png";
 
 var left_1 = "Assets/Sprites/Boyfriend/Left/Left_1.png";
 var left_2 = "Assets/Sprites/Boyfriend/Left/Left_2.png";
-var left_3 = "Assets/Sprites/Boyfriend/Left/Left_3.png";
 var left_miss_1 = "Assets/Sprites/Boyfriend/Left/Miss_1.png";
 var left_miss_2 = "Assets/Sprites/Boyfriend/Left/Miss_2.png";
 
@@ -30,9 +29,42 @@ var up_2 = "Assets/Sprites/Boyfriend/Up/Up_2.png";
 var up_miss_1 = "Assets/Sprites/Boyfriend/Up/Miss_1.png";
 var up_miss_2 = "Assets/Sprites/Boyfriend/Up/Miss_2.png";
 
+var projectWidth = "800"
+var projectHeight = "650"
+
 let toastOn;
 
 document.body.onload = function(){
+    var sliderWidthSize = document.getElementById("sizeChangerWidth")
+    var sliderHeightSize = document.getElementById('sizeChangerHeight')
+    let sizeChangersNumber = {
+        Width: document.getElementById('sizeChangerWNumber'),
+        Height: document.getElementById('sizeChangerHNumber')
+    }
+    sliderWidthSize.oninput = function () {
+        if(this.value < 520 || this.value > 972) return;
+        document.getElementById('character').width = this.value - 200
+        sizeChangersNumber.Width.value = this.value
+        projectWidth = this.value
+    }
+    sliderHeightSize.oninput = function () {
+        if(this.value < 520 || this.value > 972) return;
+        document.getElementById('character').height = this.value - 200;
+        sizeChangersNumber.Height.value = this.value
+        projectHeight = this.value
+    }
+    sizeChangersNumber.Width.oninput = function() {
+        if(this.value < 520 || this.value > 972) return;
+        document.getElementById('character').width = this.value - 200;
+        sliderWidthSize.value = this.value
+        projectWidth = this.value
+    }
+    sizeChangersNumber.Height.oninput = function() {
+        if(this.value < 520 || this.value > 972) return;
+        document.getElementById('character').height = this.value - 200;
+        sliderHeightSize.value = this.value
+        projectHeight = this.value
+    }
     let mobileArrows_S = document.getElementById('mobileArrows');
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         console.log('This Is The Mobile Version!')
@@ -149,9 +181,8 @@ document.body.onload = function(){
             "left": {
                 "1": left_1,
                 "2": left_2,
-                "3": left_3,
-                "4": left_miss_1,
-                "5": left_miss_2
+                "3": left_miss_1,
+                "4": left_miss_2
             },
             "right": {
                 "1": right_1,
@@ -170,17 +201,49 @@ document.body.onload = function(){
                 "2": down_2,
                 "3": down_miss_1,
                 "4": down_miss_2
+            },
+            "scale": {
+                "width": projectWidth,
+                "height": projectHeight
             }
         }
         let jsonContent = JSON.stringify(jsonTemplate)
         window.downloadFile('character.json', jsonContent)
     })
     let charEditButton = document.getElementById('charEdit')
+    let charButtonsSection = document.getElementById('charButtonsSection')
+    let sizeChangerButton = document.getElementById('sizeChangerButton')
+    let sizeChanger = document.getElementById('sizeChanger')
+    let sizeChangerClose = document.getElementById('sizeChangerClose')
+    let spritesChangerButton = document.getElementById('spritesChangerButton')
     let spritesChanger = document.getElementById('spritesChanger')
     charEditButton.addEventListener('click', (e) => {
         e.preventDefault()
-        charEditButton.classList.remove('visible');
-        spritesChanger.classList.add('visible')
+        if(charButtonsSection.classList == "row-class") {
+            charButtonsSection.classList.add("visible")
+        } else if (charButtonsSection.classList == "row-class visible") {
+            charButtonsSection.classList = "row-class"
+        }
+    })
+    spritesChangerButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        spritesChanger.classList.add("visible");
+        charEditButton.classList.remove('visible')
+        if (charButtonsSection.classList == "row-class visible") {
+            charButtonsSection.classList = "row-class"
+        }
+    })
+    sizeChangerButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        sizeChangerButton.classList.remove('visible')
+        if (charButtonsSection.classList == "row-class visible") {
+            charButtonsSection.classList = "row-class"
+        }
+        sizeChanger.classList.add('visible')
+    })
+    sizeChangerClose.addEventListener('click', (e) => {
+        e.preventDefault()
+        sizeChanger.classList.remove('visible')
     })
     let closeSpritesChanger = document.getElementById('closeSpritesChanger')
     closeSpritesChanger.addEventListener('click', (e) => {
@@ -215,12 +278,14 @@ document.body.onload = function(){
             if(typeof res['right'] === "undefined" || !res['right']) return badCategory('Right');
             if(typeof res['down']  === "undefined" || !res['down'] ) return badCategory('Down');
             if(typeof res['up']    === "undefined" || !res['up']   ) return badCategory('Up');
+            if(typeof res['scale'] === "undefined" || !res['scale']) return badCategory('Scale');
             // define res's
             let resIdle = res['idle'];
             let resLeft = res['left'];
             let rsRight = res['right'];
             let resUp = res['up'];
             let resDown = res['down'];
+            let rScale = res['scale']
         // sprites check
             function badSprite(name) {
                 window.TOASTS.create(
@@ -239,9 +304,8 @@ document.body.onload = function(){
             // left
             if(typeof resLeft[1]=== "undefined" || !resLeft[1]) return badSprite('Left_1');
             if(typeof resLeft[2]=== "undefined" || !resLeft[2]) return badSprite('Left_2');
-            if(typeof resLeft[3]=== "undefined" || !resLeft[3]) return badSprite('Left_3');
-            if(typeof resLeft[4]=== "undefined" || !resLeft[4]) return badSprite('Left_Miss_1');
-            if(typeof resLeft[5]=== "undefined" || !resLeft[5]) return badSprite('Left_Miss_2');
+            if(typeof resLeft[3]=== "undefined" || !resLeft[3]) return badSprite('Left_Miss_1');
+            if(typeof resLeft[4]=== "undefined" || !resLeft[4]) return badSprite('Left_Miss_2');
             // right
             if(typeof rsRight[1]=== "undefined" || !rsRight[1]) return badSprite('Right_1');
             if(typeof rsRight[2]=== "undefined" || !rsRight[2]) return badSprite('Right_"');
@@ -258,6 +322,17 @@ document.body.onload = function(){
             if(typeof resDown[3]=== "undefined" || !resDown[3]) return badSprite('Down_Miss_1');
             if(typeof resDown[4]=== "undefined" || !resDown[4]) return badSprite('Down_Miss_2');
 
+            if(typeof rScale["width"]==="undefined"||!rScale["width"]) return window.TOASTS.create(
+                'warning',
+                'Invalid Resolution',
+                'Width Resolution For Project Was Incorrect'
+            )
+            if(typeof rScale["height"]==="undefined"||!rScale["height"]) return window.TOASTS.create(
+                'warning',
+                'Invalid Resolution',
+                'Height Resolution For Project Was Incorrect'
+            )
+
            // sprites set
             idle_1       = resIdle[1];
             idle_2       = resIdle[2];
@@ -267,9 +342,8 @@ document.body.onload = function(){
 
             left_1       = resLeft[1];
             left_2       = resLeft[2];
-            left_3       = resLeft[3];
-            left_miss_1  = resLeft[4];
-            left_miss_2  = resLeft[5];
+            left_miss_1  = resLeft[3];
+            left_miss_2  = resLeft[4];
 
             right_1      = rsRight[1];
             right_2      = rsRight[2];
@@ -285,6 +359,15 @@ document.body.onload = function(){
             down_2       = resDown[2];
             down_miss_1  = resDown[3];
             down_miss_2  = resDown[4]
+
+            projectWidth = rScale["width"]
+            projectHeight= rScale["height"]
+            document.getElementById('character').width  = Number(rScale["width"] - 200)
+            document.getElementById('character').height = Number(rScale["height"] - 200)
+            sliderWidthSize.value = rScale["width"]
+            sliderHeightSize.value = rScale["height"]
+            sizeChangersNumber.Width.value = rScale["width"]
+            sizeChangersNumber.Height.value = rScale["height"]
         })
         reader.readAsText(file)
     })
@@ -398,22 +481,6 @@ document.body.onload = function(){
         const reader = new FileReader();
         reader.addEventListener('load', (event) => {
             left_2 = event.target.result
-        });
-        reader.readAsDataURL(file)
-    })
-    document.getElementById('character_left_three').addEventListener('change', (e) => {
-        const file = e.target.files[0]
-        if(window.getExtension(file.name) !== "png") {
-            return window.TOASTS.create(
-                'advice',
-                'Only <code class="marked">PNG</code> images admitted!',
-                `The file you bringed isn't a .png formated file`,
-                2.3
-            )
-        }
-        const reader = new FileReader();
-        reader.addEventListener('load', (event) => {
-            left_3 = event.target.result
         });
         reader.readAsDataURL(file)
     })
@@ -689,10 +756,6 @@ function onKeyDown(e)
             setTimeout(() => {
                 if(isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
                 setSource('character', left_2)
-                setTimeout(() => {
-                    if(isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                    setSource('character', left_3)
-                }, 50);
             }, 80);
     }
     if( e.keyCode == keyEnum.RA_Key ) {
