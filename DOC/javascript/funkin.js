@@ -718,7 +718,7 @@ function setSource(id, newSource) {
     image.src = newSource
 }
 
-var keyEnum = { LA_Key:37, RA_Key:39, DA_Key:40, UA_Key:38, W_Key: 87, A_Key: 65, S_Key: 83, D_Key: 68 };
+var keyEnum = { LA_Key:37, RA_Key:39, DA_Key:40, UA_Key:38, W_Key: 87, A_Key: 65, S_Key: 83, D_Key: 68 , I_Key: 73, J_Key: 74, K_Key: 75, L_Key: 76};
 var keyArray = new Array(4);
 
 var idle_time = 2;
@@ -754,7 +754,7 @@ function onKeyDown(e)
             idle_time = 0;
             setSource('character', left_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setSource('character', left_2)
             }, 80);
     }
@@ -765,7 +765,7 @@ function onKeyDown(e)
             idle_time = 0;
             setSource('character', right_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setSource('character', right_2)
             }, 80);
     }
@@ -777,7 +777,7 @@ function onKeyDown(e)
             idle_time = 0;
             setSource('character', down_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setSource('character', down_2)
             }, 80);
     }
@@ -789,55 +789,101 @@ function onKeyDown(e)
             idle_time = 0;
             setSource('character', up_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setSource('character', up_2)
-            }, 80);
-    }
-    if( e.keyCode == keyEnum.W_Key ) {
-        if(isKeyDown(e.keyCode)) return;
-        keyArray[keyEnum.W_Key] = true;
-            
-            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Up/Miss_1.png") return;
-            idle_time = 0;
-            setSource('character', up_miss_1)
-            setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                setSource('character', up_miss_2)
             }, 80);
     }
     if( e.keyCode == keyEnum.A_Key ) {
         if(isKeyDown(e.keyCode)) return;
         keyArray[keyEnum.A_Key] = true;
-            
-            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Left/Miss_1.png") return;
+            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Left/Left_1.png") return;
             idle_time = 0;
-            setSource('character', left_miss_1)
+            setSource('character', left_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                setSource('character', left_miss_2)
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setSource('character', left_2)
+            }, 80);
+    }
+    if( e.keyCode == keyEnum.D_Key ) {
+        if(isKeyDown(e.keyCode)) return;
+        keyArray[keyEnum.D_Key] = true;
+            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Right/Right_1.png") return;
+            idle_time = 0;
+            setSource('character', right_1)
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setSource('character', right_2)
             }, 80);
     }
     if( e.keyCode == keyEnum.S_Key ) {
         if(isKeyDown(e.keyCode)) return;
         keyArray[keyEnum.S_Key] = true;
             
+            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Down/Down_1.png") return;
+            idle_time = 0;
+            setSource('character', down_1)
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setSource('character', down_2)
+            }, 80);
+    }
+    if( e.keyCode == keyEnum.W_Key ) {
+        if(isKeyDown(e.keyCode)) return;
+        keyArray[keyEnum.W_Key] = true;
+            
+            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Up/Up_1.png") return;
+            idle_time = 0;
+            setSource('character', up_1)
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setSource('character', up_2)
+            }, 80);
+    }
+    if( e.keyCode == keyEnum.I_Key ) {
+        if(isKeyDown(e.keyCode)) return;
+        keyArray[keyEnum.I_Key] = true;
+            
+            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Up/Miss_1.png") return;
+            idle_time = 0;
+            setSource('character', up_miss_1)
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setSource('character', up_miss_2)
+            }, 80);
+    }
+    if( e.keyCode == keyEnum.J_Key ) {
+        if(isKeyDown(e.keyCode)) return;
+        keyArray[keyEnum.J_Key] = true;
+            
+            if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Left/Miss_1.png") return;
+            idle_time = 0;
+            setSource('character', left_miss_1)
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setSource('character', left_miss_2)
+            }, 80);
+    }
+    if( e.keyCode == keyEnum.K_Key ) {
+        if(isKeyDown(e.keyCode)) return;
+        keyArray[keyEnum.K_Key] = true;
+            
             if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Down/Miss_1.png") return;
             idle_time = 0;
             setSource('character', down_miss_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setSource('character', down_miss_2)
             }, 80);
     }
-    if( e.keyCode == keyEnum.D_Key ) {
+    if( e.keyCode == keyEnum.L_Key ) {
         if(isKeyDown(e.keyCode)) return;
-        keyArray[keyEnum.D_Key] = true;
+        keyArray[keyEnum.L_Key] = true;
             
             if(document.getElementById('character').src === "Assets/Sprites/Boyfriend/Right/Miss_1.png") return;
             idle_time = 0;
             setSource('character', right_miss_1)
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key)) return clearTimeout(this);
                 setSource('character', right_miss_2)
             }, 80);
     }
@@ -849,25 +895,25 @@ function onKeyUp(e)
     if(e.keyCode == keyEnum.LA_Key ) {
         keyArray[keyEnum.LA_Key] = false;
         setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                     setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                         setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                             setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                 setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                     setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                         setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                             setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                                 setIdleChar()
                                             }, 50);
                                         }, 50);
@@ -883,25 +929,25 @@ function onKeyUp(e)
     if(e.keyCode == keyEnum.RA_Key ) {
         keyArray[keyEnum.RA_Key] = false;
         setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                     setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                         setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                             setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                 setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                     setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                         setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                             setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                                 setIdleChar()
                                             }, 50);
                                         }, 50);
@@ -917,25 +963,25 @@ function onKeyUp(e)
     if(e.keyCode == keyEnum.DA_Key ) {
         keyArray[keyEnum.DA_Key] = false;
         setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                     setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                         setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                             setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                 setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                     setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                         setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                             setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                                 setIdleChar()
                                             }, 50);
                                         }, 50);
@@ -951,59 +997,25 @@ function onKeyUp(e)
     if(e.keyCode == keyEnum.UA_Key ) {
         keyArray[keyEnum.UA_Key] = false;
         setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                     setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                         setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                             setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                 setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                     setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                         setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                             setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                                setIdleChar()
-                                            }, 50);
-                                        }, 50);
-                                    }, 50);
-                                }, 50);
-                            }, 50);
-                        }, 50);
-                    }, 50);
-                }, 50);
-            }, 50);
-        }, 50);
-    }
-    if(e.keyCode == keyEnum.W_Key ) {
-        keyArray[keyEnum.W_Key] = false;
-        setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-            setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                    setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                        setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                            setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                    setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                        setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                            setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                                 setIdleChar()
                                             }, 50);
                                         }, 50);
@@ -1019,59 +1031,25 @@ function onKeyUp(e)
     if(e.keyCode == keyEnum.A_Key ) {
         keyArray[keyEnum.A_Key] = false;
         setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                     setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                         setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                             setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                 setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                     setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                         setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                             setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                                setIdleChar()
-                                            }, 50);
-                                        }, 50);
-                                    }, 50);
-                                }, 50);
-                            }, 50);
-                        }, 50);
-                    }, 50);
-                }, 50);
-            }, 50);
-        }, 50);
-    }
-    if(e.keyCode == keyEnum.S_Key ) {
-        keyArray[keyEnum.S_Key] = false;
-        setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-            setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                    setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                        setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                            setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                    setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                        setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
-                                            setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                                 setIdleChar()
                                             }, 50);
                                         }, 50);
@@ -1087,25 +1065,229 @@ function onKeyUp(e)
     if(e.keyCode == keyEnum.D_Key ) {
         keyArray[keyEnum.D_Key] = false;
         setTimeout(() => {
-            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
             setTimeout(() => {
-                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                 setTimeout(() => {
-                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                     setTimeout(() => {
-                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                         setTimeout(() => {
-                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                             setTimeout(() => {
-                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                 setTimeout(() => {
-                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                     setTimeout(() => {
-                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                         setTimeout(() => {
-                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                             setTimeout(() => {
-                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key)) return clearTimeout(this);
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                                setIdleChar()
+                                            }, 50);
+                                        }, 50);
+                                    }, 50);
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 50);
+        }, 50);
+    }
+    if(e.keyCode == keyEnum.S_Key ) {
+        keyArray[keyEnum.S_Key] = false;
+        setTimeout(() => {
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setTimeout(() => {
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                    setTimeout(() => {
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                        setTimeout(() => {
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                            setTimeout(() => {
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                setTimeout(() => {
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                    setTimeout(() => {
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                        setTimeout(() => {
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                            setTimeout(() => {
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                                setIdleChar()
+                                            }, 50);
+                                        }, 50);
+                                    }, 50);
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 50);
+        }, 50);
+    }
+    if(e.keyCode == keyEnum.W_Key ) {
+        keyArray[keyEnum.W_Key] = false;
+        setTimeout(() => {
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setTimeout(() => {
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                    setTimeout(() => {
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                        setTimeout(() => {
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                            setTimeout(() => {
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                setTimeout(() => {
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                    setTimeout(() => {
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                        setTimeout(() => {
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                            setTimeout(() => {
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                                setIdleChar()
+                                            }, 50);
+                                        }, 50);
+                                    }, 50);
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 50);
+        }, 50);
+    }
+    if(e.keyCode == keyEnum.I_Key ) {
+        keyArray[keyEnum.I_Key] = false;
+        setTimeout(() => {
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setTimeout(() => {
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                    setTimeout(() => {
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                        setTimeout(() => {
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                            setTimeout(() => {
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                setTimeout(() => {
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                    setTimeout(() => {
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                        setTimeout(() => {
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                            setTimeout(() => {
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                                setIdleChar()
+                                            }, 50);
+                                        }, 50);
+                                    }, 50);
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 50);
+        }, 50);
+    }
+    if(e.keyCode == keyEnum.J_Key ) {
+        keyArray[keyEnum.J_Key] = false;
+        setTimeout(() => {
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setTimeout(() => {
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                    setTimeout(() => {
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                        setTimeout(() => {
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                            setTimeout(() => {
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                setTimeout(() => {
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                    setTimeout(() => {
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                        setTimeout(() => {
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                            setTimeout(() => {
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                                setIdleChar()
+                                            }, 50);
+                                        }, 50);
+                                    }, 50);
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 50);
+        }, 50);
+    }
+    if(e.keyCode == keyEnum.K_Key ) {
+        keyArray[keyEnum.K_Key] = false;
+        setTimeout(() => {
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setTimeout(() => {
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                    setTimeout(() => {
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                        setTimeout(() => {
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                            setTimeout(() => {
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                setTimeout(() => {
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                    setTimeout(() => {
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                        setTimeout(() => {
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                            setTimeout(() => {
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                                setIdleChar()
+                                            }, 50);
+                                        }, 50);
+                                    }, 50);
+                                }, 50);
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 50);
+        }, 50);
+    }
+    if(e.keyCode == keyEnum.L_Key ) {
+        keyArray[keyEnum.L_Key] = false;
+        setTimeout(() => {
+            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+            setTimeout(() => {
+                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                setTimeout(() => {
+                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                    setTimeout(() => {
+                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                        setTimeout(() => {
+                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                            setTimeout(() => {
+                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                setTimeout(() => {
+                                    if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                    setTimeout(() => {
+                                        if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                        setTimeout(() => {
+                                            if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
+                                            setTimeout(() => {
+                                                if(isKeyDown(keyEnum.LA_Key) || isKeyDown(keyEnum.RA_Key) || isKeyDown(keyEnum.DA_Key) || isKeyDown(keyEnum.UA_Key) || isKeyDown(keyEnum.W_Key) || isKeyDown(keyEnum.A_Key) || isKeyDown(keyEnum.S_Key) || isKeyDown(keyEnum.D_Key) || isKeyDown(keyEnum.I_Key) || isKeyDown(keyEnum.J_Key) || isKeyDown(keyEnum.K_Key) || isKeyDown(keyEnum.L_Key)) return clearTimeout(this);
                                                 setIdleChar()
                                             }, 50);
                                         }, 50);
